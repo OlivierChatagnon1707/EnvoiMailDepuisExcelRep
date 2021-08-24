@@ -1,0 +1,452 @@
+<body style="background-color:lightgrey;">
+<font face="Segoe UI" color="black">
+GITHUBVERSION
+<B>Release date: Oct 2, 2020</B><BR>
+<BR>
+<b>Version 5.0.12:</b><BR>
+<BR>
+Favourite with parameter: now the filter settings are saved.<BR>
+<BR>
+Execute SmartObject, filter windows: <BR>
+&nbsp;&nbsp;&nbsp;- Now it's possible to update manually the "XML Representation of Filter"<BR>
+&nbsp;&nbsp;&nbsp;- If we setup a right property and just after click on OK button, a confirmation message is displayed: 'You didn't click on Add button after you filled the condition. Do you want to add it now?'<BR>
+<BR>
+For color of service type and tool "Get Dll information dependencies" to highlight the non-standard object, the system took into account new dlls 5.4.<BR>
+<BR>
+Add new default favourites: New Identity management, PDF Converter, UM User for current connected user and Workflow Reports - All error logs<BR>
+<BR>
+Transform SmartObject Log To Url: <BR>
+&nbsp;&nbsp;&nbsp;- Add button to modify directly the config file to activate the SmoLogs. It's possible to restart the K2 Service just after.<BR>
+&nbsp;&nbsp;&nbsp;- Add button to modify directly the config file to disable the SmoLogs. It's possible to restart the K2 Service just after.<BR>
+&nbsp;&nbsp;&nbsp;- Filter parameters are now imported.<BR>
+<BR>
+SmartObject Advanced search:<BR>
+&nbsp;&nbsp;&nbsp;- Fix issue on category search since 5.3<BR>
+&nbsp;&nbsp;&nbsp;- For combo "Method type", search according the "Search in" (Smo or Svo). Before it was always on both type.
+<BR>
+Environment library usage:<BR>
+&nbsp;&nbsp;&nbsp;- Fix issue on category search since 5.3<BR>
+<BR>
+Extract Workflow:<BR>
+&nbsp;&nbsp;&nbsp;- Add display of URL and Json for K2 Five workflow<BR>
+&nbsp;&nbsp;&nbsp;- Fix issue of detection of K2 Five workflow: If never modified (only deployed by Package and Deployment), it was displayed as 'K2 Studio'<BR>
+&nbsp;&nbsp;&nbsp;- Change the sort order (by name ascending instead of descending)<BR>
+<BR>
+Fix issue of service type error displayed if we are connection from a client computer (not on K2 server) and with SQL connection. Thanks to Paulk raising this issue on community!<BR>
+<BR>
+SmartObject usage: Add message when it's necessary: "In order to avoid important response time issue (up to 1 hour), we advise to not use 'SmartObject and corresponding input/output' with the SmartForm search do you want to continue?"<BR>
+<BR>
+SmartObject usage, SmartForm control search, "Check SharePoint lists, libraries and settings" and Get Dll information: <BR>
+&nbsp;&nbsp;&nbsp; Fix issue of response time due to management of all cells selected when the user select all rows with for example "CTRL+A". <BR>
+&nbsp;&nbsp;&nbsp; Instead of to return only 1 record by selected rows, the system returned 1 record by selected row + 1 record by selected cells.<BR>
+<BR>
+<BR>
+<b>Version 5.0.11:</b> May 25, 2020<BR>
+<BR>
+In menu "Tools++", add the new tool "Datafields values editor" that allow to modify datafield, folio and xml fields for a specific workflow instance.<BR>
+<BR>
+<b>Version 5.0.10:</b> March 31, 2020<BR>
+<BR>
+Execute SmartObject: Display now each windows in the task bar in order to not lost it when we open another windows.<BR>
+<BR>
+<b>Version 5.0.9:</b> February, 05 2020<BR>
+<BR>
+Get Dll information (from a service type and from Tools++/"Get Dll information for all Service Types"), column "Additional Information", fix issue of display:<BR>
+<BR>
+Expected value in the K2HostServer.exe.config in node assemblyBinding (Just after ' &lt;probing privatePath="hostedServers; hostedServices; securityproviders" /&gt;'):<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;dependentAssembly&gt;<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;assemblyIdentity&nbsp;name&nbsp;=&nbsp;"ClosedXML" publicKeyToken="System.Byte[]" culture = "neutral" /&gt;<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;codeBase version="0.87.0.0" href ="C:\Program Files (x86)\K2 blackpearl\ServiceBroker\OldDllVersions\ClosedXML.dll"/&gt;<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/dependentAssembly &gt; <BR>
+<BR>
+The public token was not correctly displayed: "System.Byte[]"<BR>
+Now we display: <BR>
+<BR>
+Expected value in the K2HostServer.exe.config in node assemblyBinding (Just after ' &lt;probing privatePath="hostedServers;hostedServices;securityproviders" /&gt;'):<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;dependentAssembly&gt;<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;assemblyIdentity name = "ClosedXML" publicKeyToken="fd1eb21b62ae805b" culture = "neutral" /&gt;<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;codeBase version="0.87.0.0" href ="C:\Program Files (x86)\K2 blackpearl\ServiceBroker\OldDllVersions\ClosedXML.dll"/&gt;<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/dependentAssembly &gt; <BR>
+<BR>
+<b>Version 5.0.8:</b> January, 22 2020<BR>
+<BR>
+Execute SmartObject: Don't display it as "TopMost": Now if we click on another windows (Like Word), the form "Execute SmartObject" is now hidden.<BR>
+<BR>
+<b>Version 5.0.7:</b> January, 21 2020<BR>
+<BR>
+Not force the application to be executed as administrator. <BR>
+A warning message is now displayed if you are not administrator of the machine and if you are not in an accessible directory for write file in order to save application settings during close (File SmartObject Service Tester++.exe.config)<BR>
+<BR>
+Add menu Force identity refresh.<BR>
+<BR>
+Execute SmartObject : <BR>
+&nbsp;&nbsp;&nbsp;- Allow to open several windows in the same time.<BR>
+&nbsp;&nbsp;&nbsp;- Input property: when a K2 FQN (starting by a valid Label) is detected in the clipboard, <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;when you past it in a text box with name like name, user name, group name, search string       or      label, labelname, k2 label, user provider, security label<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the system split it directly in 2 parts in the corresponding text box. <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Main example with following SmartObjects: UmUser, UmGroup, Categories_Authorization_User (Method SearchUsers)<BR>
+&nbsp;&nbsp;&nbsp;- "Return Properties" part: if a value contains more than 4537 characters, the textbox was empty. Now, we display a message explaining to go to the corresponding tab.<BR>
+&nbsp;&nbsp;&nbsp;- "Return Properties" part: if lenght is greater than 100, if we click on the text box, we go directly to the corresponding tab.<BR>
+&nbsp;&nbsp;&nbsp;- Fix issue when click on "Update favourites with parameters", take into account the data just filled in the current textbox. <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Before we need to leave the textbox to be sure the data took into account by "Update favourites with parameters"<BR>
+
+<BR>
+SmartObject advanced search: add search by Smo GUID.<BR>
+<BR>
+Fix issue for access to URL with space like : SmartObject Explorer\System\SharePoint 2013 Integration\SharePoint_Integration_Workflow_Helper_Methods.<BR>
+<BR>
+Fix wording "libaries" by "libraries" in "Check SharePoint lists, libraries and settings" in 3 places.<BR>
+<BR>
+<b>Version 5.0.6:</b> October, 08 2019<BR><BR>
+Smo Advanced search: <BR>
+- Fix issue of label name no aligned correctly after resize<BR>
+- Fix issue on 4.6 and 4.7 versions and manage correctly search on Output<BR>
+- Display column "Smo method type". When double click on Smo part, set the method as default one.<BR>
+- Change display order of columns<BR>
+<BR>
+Jump to service object node: Fix if path not already in favourite<BR>
+<BR>
+Add "What's new and update" in menu Help<BR>
+<BR>
+Server properties: List usage of tools using SQL connection.<BR>
+<BR>
+Favourite management: Fix issue of favourite still in parameter for other SmartObjects after the Favourite selection.<BR>
+Favourite update: Add SmoST++ icon<BR>
+<BR>
+<b>Version 5.0.5:</b> October, 07 2019<BR>
+<BR>
+<u>Improvements:</u><BR>
+<BR>
+Add new tools :<BR>
+&nbsp;&nbsp;&nbsp;- Service instance usage statistics: accessible from any SmartObject Category<BR>
+&nbsp;&nbsp;&nbsp;- Environment library usage<BR>
+&nbsp;&nbsp;&nbsp;- Check licensed user<BR>
+&nbsp;&nbsp;&nbsp;- SmartObject advanced SQL search<BR>
+    <BR>
+    <BR>
+SmartObject explorer: Display the number of object in categories. Add a setting for this.<BR>
+<BR>
+Manage new checkbox for favourite: "Open with ADO query"<BR>
+<BR>
+Execute SmartObject: Add button Count ADO<BR>
+<BR>
+Add check of linked SmartObject before Refresh Service type/Service instance, Edit Service instance<BR>
+<BR>
+Register service instance: Not allow to fill Password if authentication is Service account or impersonate (Before it was possible to fill it)<BR>
+<BR>
+Improve get of current version: now check only the version linked to K2 Server (check with Server.Server)<BR>
+ <BR>
+Improve error message is we untick "Integrated Security" in server Properties: Advise to tick it:  Verify if you didn't forget to tick "Integrated Security" in Server Properties<BR>
+<BR>
+Env lib usage, Sharepoint info, SmartFormSearch and Usage and SmartObject usage: add Nb records after "Executed the {0} at {1} in {2}."<BR>
+<BR>
+Sharepoint application setting: <BR>
+&nbsp;&nbsp;&nbsp;- Display group wording (Useful for detected of missing group)<BR>
+&nbsp;&nbsp;&nbsp;- Add tabs "General settings" and "Group providers"<BR>
+<BR>
+Rename "Create SmartObject" by "Create or update SmartObject"<BR>
+<BR>
+Server property: Fill automatically the database parameter using the file C:\Program Files (x86)\K2 blackpearl\Host Server\Bin\K2Server.setup<BR>
+<BR>
+SmartObject  usage:<BR>
+&nbsp;&nbsp;&nbsp;- Allow to double click on Smo to test it.<BR>
+&nbsp;&nbsp;&nbsp;- Add  message if no Smo Found: "No results for category '{0}'.\r\nWhy not try the same search in the parent category ?"<BR>
+&nbsp;&nbsp;&nbsp;- Add disclaimer: "Only smartobjects referenced through out-of-the-box K2 components will be surfaced. Usage through .net code or web services cannot be retrieved."<BR>
+&nbsp;&nbsp;&nbsp;- Add category limitation for Service object search: It will be set by default when used by the "Service instance usage statistics".<BR>
+&nbsp;&nbsp;&nbsp;- Don't display column "SmoSystemNameAsSearch" if we are in the first tab "SmartObject name".<BR>
+    <BR>
+    <BR>
+SmartForm control search and usage:<BR>
+&nbsp;&nbsp;&nbsp;- Add column "OriginalControlName"<BR>
+&nbsp;&nbsp;&nbsp;- For final result, add search on Field: impact on the value linked.<BR>
+&nbsp;&nbsp;&nbsp;- Fix double click on Url for edit not working<BR>
+<BR>
+    <BR>
+Create SmartObjects: <BR>
+&nbsp;&nbsp;&nbsp;- Add textbox for Prefix to add dynamically after the "Smo..."<BR>
+&nbsp;&nbsp;&nbsp;- Set as default Category the last selected one.<BR>
+&nbsp;&nbsp;&nbsp;- Add checkbox 'Remove "Smo" '<BR>
+&nbsp;&nbsp;&nbsp;- Review the tab stop order<BR>
+<BR>
+Transform SmartObject Log To Url: <BR>
+&nbsp;&nbsp;&nbsp;- Add checkbox "Remove recurring SmartObjects calls" and review tabindexes (Order of control when press tab button)<BR>
+ <BR>
+<BR>
+<u>Fixes:</u><BR>
+<BR>
+Service object explorer: Don't display as specific the "Cloud Identity" and "Sync Service" and corresponding service instances and Smo<BR>
+<BR>
+SmartObject  usage:<BR><BR>
+ &nbsp;&nbsp;&nbsp;- Fix issue of search on category containing \<BR>
+ &nbsp;&nbsp;&nbsp;- For K2Studio workflow: Avoid to display SmartObject that are not in the inital list<BR>
+ &nbsp;&nbsp;&nbsp;- For K2 Studio: Search in the event "Create reference" too<BR>
+ &nbsp;&nbsp;&nbsp;- K2 Studio workflow: Fix issues of some Smo not displayed if used in the same workflow.<BR>
+ &nbsp;&nbsp;&nbsp;- For K2 Five, fix missing method for "Create reference"<BR>
+     <BR>
+<BR>
+Workflow Extract : <BR>
+&nbsp;&nbsp;&nbsp;- ix issue if SearchString is null or Search context is null<BR>
+<BR>
+SmartFormControlSearchAndUsage : <BR>
+&nbsp;&nbsp;&nbsp;- Transform category path "K2 Designer > All Items > SuiviSupport > Views" to "SuiviSupport\Views"<BR>
+   <BR>
+“Get Dll information for all Service Types” :<BR>
+Considere these dlls as K2 (Not as other):<BR>
+ADOQueryService.dll, K2.Services.Actions.dll, SourceCode.SharePoint.Client.dll, SourceCode.SmartObjects.Services.SharePoint.Common.dll, SourceCode.SmartObjects.Services.SharePoint.Content.dll, SourceCode.SmartObjects.Services.SharePoint.Management.dll, SourceCode.SmartObjects.Services.SharePointV1.dll, SourceCode.SmartObjects.Services.SharePointV2.dll, System.DirectoryServices.Protocols.dll<BR>
+<BR>
+Fix issue Object Reference not set to an instance of an object   <BR>
+   <BR>
+Display the menu "Register ServiceType" on node "ServiceObject explorer" only on right click (Before it was displayed on left click too).<BR>
+<BR><BR>
+<BR>
+<BR>
+
+<b>Version 5.0.4:</b><BR>
+Fix issue for Smo usage: <BR>
+  - Now the assembly Newtonsoft.Json.dll is embedded.<BR>
+  - Fix K2 five workflow name not displayed<BR>
+  - Fix management of Smo Usage with category containing space: replace "_" by " "<BR>
+<BR>
+Get Dll Information: Consider Newtonsoft.Json.dll as normal dll (Not as system).<BR>
+<BR>
+<b>Version 5.0.3:</b><BR>
+Create "SmartObject usage" tool available from Service Instance, Service Object, SmartObject Category and SmartObject.<BR>
+<BR>
+Manage favourite display name<BR>
+<BR>
+Execute SmartObject: Display a tab "Html" with the html content if the content start with "html".<BR>
+For all tabs added: if only one property is returned (And correspond to the type linked to the tab) display the WebBrowser tab instead of the simple first tab by default.<BR>
+<BR>
+Add right click on "ServiceObject Explorer" node for "Register Service type"<BR>
+<BR>
+Refresh of Service Type:<BR>
+Review wording from <BR>
+"Do you want to refresh the Service Type 'xx'?" <BR>
+to<BR>
+"Do you want to refresh all Service Instances of this Service Type 'xx'?"<BR>
+<BR>
+In SmartObjects nodes, sub nodes methods, service instance, service right: Add right click "Jump to service object node" near "Create SmartObject (mainly for found Smo Path or compare it with the ServiceObject)".<BR>
+<BR>
+Workflow Search and Extract: Fix wording "Past from Clipboard" to "Paste from Clipboard".<BR>
+<BR>
+Add Icon SmartObjectService Tester++ in all the specific tools<BR>
+<BR>
+Detection of the K2 version: don't display "New Identity Service" or "K2 Configuration Service" if it's the last information<BR>
+<BR>
+Fix: Display in bold if the path is not correct (Before it was put correctly in bold only if the path didn't contains -E or -EE)<BR>
+<BR>
+Rename "Create SmartObject (mainly for compare it with the ServiceObject)" to "Create SmartObject (mainly for compare it with the ServiceObject or found other SmOs)"<BR>
+<BR>
+Fix standard Smo Service tester issue if we only fill hour without date in the input property: Error displayed (Normal): Exception thrown: 'System.ArgumentOutOfRangeException' in System.Windows.Forms.dll<BR>
+Additional information: Value of '01/01/0001 15:24:39' is not valid for 'Value'. 'Value' should be between 'MinDate' and 'MaxDate'.<BR>
+But after, the windows was completely disabled<BR>
+Now the windows is available <BR>
+<BR>
+In several part of the application, improve the display of the execution time: 1 second, 2 seconds (with s).<BR>
+<BR>
+Improve error message if we try to register service instance with a missing dependent dlls.<BR>
+Tested with "K2Field.DocxXmlTemplater.Templater"<BR>
+Example:<BR>
+Before:<BR>
+"<BR>
+Issue: "SmartObject Server Exception: Exception has been thrown by the target of an invocation.<BR>
+Source : SourceCode.SmartObjects.Services.Management.<BR>
+Inner Exception : Exception has been thrown by the target of an invocation.<BR>
+Source : SourceCode.HostServerLib<BR>
+"<BR>
+<BR>
+Now:<BR>
+"<BR>
+SmartObject Server Exception: Exception has been thrown by the target of an invocation.<BR>
+Source : SourceCode.SmartObjects.Services.Management<BR>
+Inner Exception : Exception has been thrown by the target of an invocation.<BR>
+Source : SourceCode.HostServerLib<BR>
+Inner Exception : Could not load file or assembly 'DocumentFormat.OpenXml, Version=2.8.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17' or one of its dependencies. The system cannot find the file specified.<BR>
+Source : K2Field.DocxXmlTemplater<BR>
+Issue linked to 'DocumentFormat.OpenXml':<BR>
+Please verify if the 'Open XML SDK 2.5 for Microsoft Office' is installed<BR>
+"<BR>
+<BR>
+Fix of original version of ++] :<BR>
+Fix wording of Setting/Description of the first row in "Table for naming convention of SmartObjects": <BR>
+"Ogininal name (allowing to selected it in combo)"<BR>
+to<BR>
+"Original name (allowing to selected it in combo)"<BR>
+<BR>
+<BR>
+<b>Version 5.0.2:</b><BR>
+Fix issue during delete of service instance
+"Error: Impossible to get the SmartObject list of this Service Instance<BR>
+Error: Invalid column name 'SmartObjectGUID'."<BR>
+Avoid "Timeout expired. The timeout period elapsed prior to completion of the operation or the server is not responding. The statement has been terminated"<BR>
+<BR><b>Version 5.0.1:</b><BR>
+Fix issue trying to "Create SmartObject" or delete Service instance since 5.3.<BR>
+<BR>
+Menu: Move "Transform SmartObjects Log to Smartobject - Service - Tester++ Urls" and "Settings" in the menu "Tools++"<BR>
+<BR>
+Create in menu "Tools++", the tool "Get Dll information for all Service Types": It's the result of the right click on all Service Types and "Get DLL Information". You will be able to export all non standard dll (with dependencies) in a zip file.<BR>
+For discover the dependency, do a recursive search to found all sub dependency: Display the parent Dll in column "Parent DLL path".<BR>
+Fix issue of dll blocked when loading it by "Get DLL information".<BR>
+Manage if dll path is in a sub directory.<BR>
+<BR>
+Extract Workflow: Fix issue if the Search context is not set<BR>
+<BR>
+During execution of SmartObject: Add warning only if "DocumentFormat.OpenXml" is in the error of Smo Execution:<BR>
+Issue linked to 'DocumentFormat.OpenXml':<BR>
+Please verify if the 'Open XML SDK 2.5 for Microsoft Office' is installed"<BR>
+<BR>
+Update hard coded guid for Standard object 5.3 (For display of custom object in color)<BR>
+<BR>
+When Acrobat Reader is installed we had an issue trying to display the pdf in the control WebBrowser<BR>
+See this article: Using the AcroPDF.dll within the Microsoft WebBrowser control is unsupported<BR>
+https://helpx.adobe.com/acrobat/kb/using-acropdf-dll-within-microsoft.html<BR>
+Now we avoid the use of WebBrowser control  and then open directly the PDF files.<BR>
+<BR>
+<BR>
+Include changes done in SmoST standard between 5.0 and 5.3:<BR>
+Removed action "Remove SmartObject From Category" and "Remove SmartObjects From Category" (All smo)<BR>
+Execution of SmartObject with type "SmartObjectReader" (it's the default one): simplify the call.<BR>
+Part "Order by" of execution of SmartObject: replace wording "Clear Alll" by "Clear All". (Already fixed in SmoST++ for filter)<BR>
+<BR>
+Refresh Service type, Refresh Service instance: forbid these action if its a System one (detected by guid):<BR>
+This system service instance is locked and cannot be refreshed<BR>
+This system service type is locked and cannot be refreshed<BR>
+<BR>
+For system "Update Service instance" add Warning: For compatibility reason we can't call 'UpdateServiceInstanceSettings' for system Service Instances with the SmartObject Service Tester++\r\nPlease do it with the standard SmartObject Service Tester"<BR>
+<BR>
+List of Service Instance:<BR>
+Account Management Service<BR>
+Active Directory Service2<BR>
+K2 Generic Settings Service<BR>
+K2 Management<BR>
+K2 Workspace<BR>
+PDF Converter<BR>
+SharePoint Integration<BR>
+SharePoint User Functions Service<BR>
+SmartBox Service<BR>
+SmartObject Service Functions<BR>
+Task Allocation Service<BR>
+URM Service<BR>
+Workflow Reporting Service<BR>
+Workflow Service<BR>
+<BR>
+Service types:<BR>
+CRM 4 Entity<BR>
+CRM 4 Functions<BR>
+Deployment Service<BR>
+K2 Generic Settings Service<BR>
+K2 Management<BR>
+K2 Workspace<BR>
+Licensing Service<BR>
+MobileServiceBroker<BR>
+PDF Converter<BR>
+SharePoint 2013<BR>
+SharePoint 2013 Integration<BR>
+SharePoint Functions<BR>
+SmartBox Service<BR>
+SmartObject Service Functions<BR>
+Task Allocation Service<BR>
+User Role Manager Service<BR>
+Workflow Reporting<BR>
+Workflow Service<BR>
+<BR>
+<BR>
+<BR>
+
+
+<BR>
+<b>Version 4.4.9:</b><BR>
+If error during publish Smo add this:<BR>
+You can too have this error if you are trying to change the category of the SmartObject and you don't have the role "Security Administrator" (In K2 Management > Users  > Roles)<BR>
+<BR>
+Smart Form control search and usage (Find references): <BR>
+For the search usage part, during the automatic fill of the textbox for Category (only for limite usages for response time), remove \View or \Form or  \V or \F at the end of the category<BR>
+Improve the navigation between text box and button with keyboard "Tab".<BR>
+For result of control (First table), change the order by and display if different the original name (if saved).<BR>
+Example: display "hidden ExistAppType Data Label (Originally 'Data Label17')" instead of "hidden ExistAppType Data Label"<BR>
+Other little fixes<BR>
+<BR>
+Check Sharepoint List and Libraries: <BR>
+Improve message if current user is a not member of a group with "Contribute" (or higer) permission level.<BR>
+Part K2 Settings: Add button for mass update of Smartforms Runtime URL.<BR>
+Put in red the "In progress"<BR>
+<BR>
+Server Properties: <BR>
+Add 2 button for simple asynchronous test connection to K2 server and K2 worflow server<BR>
+
+<BR>
+<b>Version 4.4.8:</b><BR>
+SmartForms controls search and usage: Improvements and fixes<BR>
+Fix issue of "Object reference not set to an instance of an object" at the start of the SmoST++.<BR>
+<BR>
+<b>Version 4.4.7:</b><BR>
+Add Tool SmartForms controls search and usage.<BR>
+Fix issue of several "Execute SmartObject" windows displayed when we navigate to combo of Favorite URLs with keyboard.<BR>
+Change UMUSER path from "All SmartObject" to "System\Management\UserManagement\SmartObjects" <BR>
+<BR>
+<b>Version 4.4.6:</b><BR>
+On any SmartObjects, add "Copy SmartObject to a category" in order to copy it even if the destination category is not easily accessible. <BR>
+Typical example: SmartObject in end of "All SmartObjects" to copy in category default. <BR>
+Procedure:<BR>
+&nbsp;&nbsp;&nbsp;1) Click on the destination category<BR>
+&nbsp;&nbsp;&nbsp;2) Right click on the destination category and choose "Copy SmartObject to category".<BR>
+ <BR>
+Create menu "Tool++" with "Check SharePoint lists, libraries and settings" and a new tool "Extract workflows"<BR>
+  <BR>
+"Get SharePoint lists, libraries and settings":<BR> 
+&nbsp;&nbsp;&nbsp;Add Get of K2 settings.<BR>
+&nbsp;&nbsp;&nbsp;Fix issue with 4.6.11<BR>
+   <BR>
+Screen "Execute SmartObject": In Title, display the system name if not same of the display name.<BR>
+<BR>
+TransformSmartObjectLogToUrl : Add button "Open HostServer.exe.config".<BR>
+<BR>
+<b>Version 4.4.5:</b><BR>
+Fix issue "Automatic parameter definition '{0}' is not valid: it should contains '=' statement"" if a parameter contains "-E"   example: <BR>
+ -E List ID=A1118921-D57A-46BA-B33B-E151B86E170A;Site URL=https://portal.denallix.com<BR>
+Fix regression issue of version 4.4.4 during when click on button "Refresh"<BR>
+In Setting menu: replace checkbox "Get only main version" by a Combo<BR>
+<BR>
+<b>Version 4.4.4:</b><BR>
+"Get All SharePoint Lists and Libraries Ids": Rename it to "Check SharePoint Lists and Libaries". Allow to restrict for a site, Add check-boxes "Test Get Lists/Documents of SmartObjects" and "Test SmartObjects synchronization"<BR>
+This tool is now not dependant to SQL connection<BR>
+<BR><b>Version 4.4.3:</b><BR>
+Allow to display all Sharepoint Lists and Libraries Ids by a right click on any category in "SharePoint 2013" and select "Get All Sharepoint Lists and Libaries Ids"<BR>
+<BR><b>Version 4.4.2:</b><BR>
+Display SMOST++ version and K2 Version in the header.<BR>
+<BR><b>Version 4.4.1:</b><BR>
+Fix issue during database connection at start of application if only one server setup.<BR>
+<BR>
+New version 4.4.0.x with compatibility with K2Five 5.2<BR>
+Edit Service instance: allow to copy the GUID and SystemName (The text box was not Enabled)<BR><BR>
+
+<b>Version 4.3.4:</b><BR>
+Fix a regression issue of the 4.3.2: It was not possible to connect to database for version Before K2Five.<BR>
+In Execute Client method screen: Change the display name of the Methods of the Smo UMUser:<BR>
+&nbsp;&nbsp;&nbsp;Get Users: This method returns values from direct security provider (Active directory for K2 Label).<BR>
+&nbsp;&nbsp;&nbsp;Get User Details: This method returns values from K2 'Cache' table Identity.Identity.<BR>
+In a particular case, display "Generate Key" in the service instance parameter.<BR>
+Setting page: Part naming convention, by default display the current service object selected<BR>
+In case of a new service instance parameter has been added but not set, add an help message in the error message when we get an error during refresh of service instance: "Please try an Edit of the Service Instance."<BR>     
+<BR>
+<b>Version 4.3.3:</b><BR>
+Execute client method: The right click on the result table to Copy, Save as the cell didn't work.<BR>
+<BR>
+<b>Version 4.3.2:</b><BR>
+Server Property: Allow to fill the SQL server Name and Database for K2 Five.<BR>
+<BR>
+If the system is not in english, in case of crash at start due to missing file "SmartObject Service Tester++BetaVersion.exe.config", the system didn't create it automatically.<BR>
+Now we recreate it automatically even if we are not in English. Problem link to the detection of the error message.<BR>
+<BR>
+<b>Version 4.3.1:</b><BR>
+Execute client method: Remove the space after and before the property type:<BR>
+Example:<BR>
+Replace "Process Name ( Text )" by "Process Name (Text)".<BR>
+<BR>
+Increase the width of the form if at least one input property or parameter have a very long display name: Do this increase when we change the method (It was done previously at the form load).
+
+<BR><BR>You can find more information (with screen shots) of previous main version on the file "Release Note" of this link:<BR>
+http://community.k2.com/general-k2-utilities-85/smartobject-service-tester-plus-plus-92426
+</font> 
+
+</body>
